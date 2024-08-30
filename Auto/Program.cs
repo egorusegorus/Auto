@@ -24,6 +24,7 @@ namespace Auto
             Höchstegeschwindigket = Höchstegeschwindigket1;
             Kw = Kw1;
             double PS = Ps();
+            PS.ToString("N2");
         }
 
         public override string ToString()
@@ -39,6 +40,10 @@ namespace Auto
             return str;
         }
     }
+
+    // double a = 233,45768  /// Runden für anzeigen
+    // a.toString("N2")
+    // Math.Round(a,2)       /// Runden für    
         internal class Program
         {
             static void Main(string[] args)
@@ -48,7 +53,7 @@ namespace Auto
                 Console.Clear();    
                 Console.WriteLine("Auto");
                 
-                Auto auto1 = new Auto(6.2, "Golf", "Volkswagen", 180, 180);
+                Auto auto1 = new Auto(6.2, "Golf", "Volkswagen", 180, 123);
                 Auto auto2 = new Auto(4.2, "M3", "BMW", 353, 300);
                 Auto auto3 = new Auto(7.3, "A4 2.0 TFSI", "Audi", 140, 200);
                 Console.WriteLine(auto1);
